@@ -3,8 +3,8 @@ import Home from '@/pages/index'
 
 describe('Home', () => {
   it('renders a heading', () => {
-    const component =  render(<Home />)
-
-    expect(component).toMatchSnapshot();
+    render(<Home />)
+    const mainText = screen.getByText('You are in home page')
+    expect(mainText).toBeInTheDocument();
   })
 })
